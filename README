@@ -3,7 +3,7 @@ Robbery Planning Software
 
 This is software to plan the optimal houses to "hit" in a purely hypothetical robbery. Please note that this software has only been tested under ruby 2.0.0 and may break under different versions of ruby. The following steps can be used to test this software:
 
-1) git clone <repo location>
+1) git clone https://github.com/magnuscodex/robbery_planner.git
 
 2) cd robbery
 
