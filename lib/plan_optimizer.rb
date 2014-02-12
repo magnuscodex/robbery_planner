@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 class PlanOptimizer
+  # PlanOptimizer is initialized with a list of home values.
   def initialize(homes)
     @home_list = []
     for e in homes
@@ -12,11 +13,16 @@ class PlanOptimizer
     results = []
     for i in (0...@home_list.size)
       max = 0
+      # For ever "earlier" home other than the immediately prior home
+      # check which one is the tail end of the most valuable string
+      # of robberies and use that as the previous robbery.
       for j in (0...i-1)
         if results[j] > max
           max = results[j]
         end
       end
+      # Each result element is the maximum possible value of a string of
+      # robberies ending at the ith house.
       results[i] = max + @home_list[i]
     end
 
