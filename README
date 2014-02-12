@@ -1,0 +1,14 @@
+Robbery Planning Software
+==========================
+
+This is software to plan the optimal houses to "hit" in a purely hypothetical robbery. Please note that this software has only been tested under ruby 2.0.0 and may break under different versions of ruby. The following steps can be used to test this software:
+
+1) git clone <repo location>
+
+2) cd robbery
+
+3) ./tests/unit_tests.rb
+
+4) ./bin/robbery-plan.rb
+
+5) In your terminal input a space separated list of home values and then hit enter to pass the input to the program via stdin.
