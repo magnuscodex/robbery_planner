@@ -27,6 +27,9 @@ class PlanOptimizer
     end
 
     max = results.max
+    if max.nil?
+      max = 0
+    end
     return max
   end
 end
