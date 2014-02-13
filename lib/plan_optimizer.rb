@@ -13,10 +13,11 @@ class PlanOptimizer
     results = []
     for i in (0...@home_list.size)
       max = 0
-      # For ever "earlier" home other than the immediately prior home
+      # For the two "earlier" homes other than the immediately prior home
       # check which one is the tail end of the most valuable string
       # of robberies and use that as the previous robbery.
-      for j in (0...i-1)
+      orig = i-3 > 0 ? i-3 : 0
+      for j in (orig...i-1)
         if results[j] > max
           max = results[j]
         end
